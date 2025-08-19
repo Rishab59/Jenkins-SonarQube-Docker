@@ -9,6 +9,7 @@ pipeline {
         stage ('Checkout') {
             steps {
                 git branch: 'main',
+                credentialsId: 'Jenkins-SonarQube-Docker-Github-PAT',
                 url: 'https://github.com/Rishab59/Jenkins-SonarQube-Docker.git'
             }
         }
